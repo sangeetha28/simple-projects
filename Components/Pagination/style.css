@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.page {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer
+}
+
+.nav-container {
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid green;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+
+svg {
+  stroke: green;
+  width: 24px;
+  height: 24px;
+}
+
+.page:hover,
+.nav-container:hover {
+  border-radius: 60%;
+  background-color: green;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-container:hover svg {
+  stroke: white;
+}
