@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 80px 400px 1fr 300px;
+  grid-template-rows: 80px 1fr;
+}
+
+.nav,
+.menu,
+.email--template,
+.email--preview,
+.additional {
+  border: 1px solid black;
+}
+
+.nav {
+  grid-row: span 2;
+  background-color: rgb(235, 126, 126);
+  color: white;
+}
+
+.menu {
+  grid-column: span 3;
+  background-color: rgb(92, 16, 214);
+  display: flex;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.email--template {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: honeydew;
+  overflow: scroll;
+}
+
+.email--preview,
+.additional {
+  display: flex;
+  justify-content: center;
+}
+
+.template--container {
+  width: 300px;
+  border: 1px solid grey;
+  padding: 30px;
+  background-color: grey;
+  flex-shrink: 0;
+}
+
+aside {
+  background-color: #e9ecef;
+}
+
+li {
+  list-style-type: none;
+  color: white;
+  padding: 10px;
+}
+
+li:hover {
+  background-color: white;
+  color: black;
+}
+
+li:last-child {
+  margin-left: auto;
+}
