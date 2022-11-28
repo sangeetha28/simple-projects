@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  font-family: "Rubik", sans-serif;
+  color: white;
+  overflow-x: hidden;
+}
+
+.container {
+  box-sizing: border-box;
+  background: url("./hero.jpeg");
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  padding: 40px;
+}
+
+section {
+  padding: 40px;
+  color: black;
+}
+
+.nav-container {
+  padding: 0;
+  display: flex;
+  font-size: 20px;
+  font-weight: 700;
+  justify-content: space-between;
+}
+
+
+h1 {
+  font-size: 45px;
+  align-self: flex-start;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:20px;
+  width: 35%;
+  padding: 20px;
+  height: 100%;
+  font-size: 24px;
+}
+
+button {
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: orange;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  align-self: flex-start;
+}
