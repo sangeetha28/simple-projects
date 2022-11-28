@@ -1,0 +1,63 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+  font-family: "Rubik", sans-serif;
+}
+
+section {
+  padding: 9.6rem;
+  background-color: rgb(228, 215, 190);
+}
+
+button {
+  display: inline-block;
+  padding: 1.6rem 3.2rem;
+  background-color: orange;
+  border: none;
+  font-size: 1.4rem;
+  font-weight: 900;
+  border-radius: 5px;
+}
+
+button a {
+  text-decoration: none;
+  color: white;
+}
+
+button:hover,
+button:active {
+  border: none;
+  background-color: rgb(218, 170, 81);
+  transition: background-color 0.3s;
+}
+
+.section-hero {
+  max-width: 125rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 auto;
+  align-items: center;
+  gap: 9.6rem;
+}
+
+.heading-primary {
+  font-size: 5.2rem;
+  line-height: 1.1;
+}
+
+.hero-description {
+  font-size: 2.2rem;
+  line-height: 1.1;
+}
+
+img {
+  width: 100%;
+}
