@@ -1,10 +1,23 @@
+import { useState } from "react";
+import NewExpenseForm from "../NewExpenseForm";
 import classes from "./index.module.css";
 
 const NewExpense = () => {
+  const [showExpenseForm, setShowExpenseForm] = useState(false);
+
   return (
-    <div className={classes.container}>
-      <button>Add a New Expense</button>{" "}
-    </div>
+    <>
+      {!showExpenseForm && (
+        <div className={classes.container}>
+          <button onClick={() => setShowExpenseForm(true)}>
+            Show New Expense Form
+          </button>{" "}
+        </div>
+      )}
+      {showExpenseForm && (
+        <NewExpenseForm expenseFormHandler={setShowExpenseForm} />
+      )}
+    </>
   );
 };
 
