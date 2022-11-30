@@ -1,5 +1,5 @@
 import ExpenseCard from "../ExpenseCard/index";
-import classes from './index.module.css'
+import classes from "./index.module.css";
 
 const expenses = [
   {
@@ -24,10 +24,14 @@ const expenses = [
 ];
 
 const NewExpenseItemList = () => (
-  <div className={classes.container}>
-    {expenses.map((e) => (
-      <ExpenseCard />
-    ))}
+  <div>
+    <ul className={classes.container}>
+      {expenses.map((item) => (
+        <li key={item.id}>
+          <ExpenseCard item={item} />
+        </li>
+      ))}
+    </ul>
   </div>
 );
 

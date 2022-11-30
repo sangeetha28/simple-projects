@@ -1,5 +1,6 @@
 .container {
   min-width: 55rem;
+  margin-top: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -10,7 +11,7 @@
 .mainContainer {
   box-sizing: border-box;
   width: 100%;
-  background-color: #F7DB4F;
-  color: black;
+  background-color: #2F9599;
+  color: white;
   padding: 20px;
 }
