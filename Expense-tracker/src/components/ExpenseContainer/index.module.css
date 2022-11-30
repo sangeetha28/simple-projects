@@ -1,0 +1,16 @@
+.container {
+  min-width: 55rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.mainContainer {
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #F7DB4F;
+  color: black;
+  padding: 20px;
+}

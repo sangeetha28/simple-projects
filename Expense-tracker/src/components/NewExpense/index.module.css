@@ -1,0 +1,25 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: #2f9599;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 1rem;
+  border: none;
+  background-color: #a7226e;
+  border-radius: 5px;
+  cursor: pointer;
+  color: inherit;
+}
+
+button:hover,
+button:active {
+  background-color: #c57ba5;
+  transition: background-color 0.4s;
+}

@@ -1,0 +1,13 @@
+.container {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+   padding: 20px;
+  color: black;
+}
+
+.filter {
+  font-size: 1rem;
+  font-weight: 900;
+}

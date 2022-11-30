@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+  background-color:  #F26B38;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.graphItems {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.graphItem {
+  height: 150px;
+  width: 15px;
+  border-radius: 10px;
+  border: 1px solid black;
+}
