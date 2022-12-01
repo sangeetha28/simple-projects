@@ -2,7 +2,7 @@ import { useState } from "react";
 import NewExpenseForm from "../NewExpenseForm";
 import classes from "./index.module.css";
 
-const NewExpense = () => {
+const NewExpense = ({ expenseHandler }) => {
   const [showExpenseForm, setShowExpenseForm] = useState(false);
 
   return (
@@ -15,7 +15,10 @@ const NewExpense = () => {
         </div>
       )}
       {showExpenseForm && (
-        <NewExpenseForm expenseFormHandler={setShowExpenseForm} />
+        <NewExpenseForm
+          expenseFormHandler={setShowExpenseForm}
+          expenseItemHandler={expenseHandler}
+        />
       )}
     </>
   );
