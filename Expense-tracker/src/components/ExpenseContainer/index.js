@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import NewExpense from "../NewExpense/index";
 import Filter from "../Filter/index";
 import FilterGraph from "../FilterGraph/index";
@@ -30,6 +30,15 @@ const expenses = [
 const ExpenseContainer = () => {
   const [expensesList, setExpensesList] = useState(expenses);
   const [filteredYear, setFilteredYear] = useState("2022");
+  const [dataPoints, setDataPoints] = useState([]);
+
+  useEffect(() => {
+    const dataPoints = expensesList.map((el) => ({
+      month: el.date.getMonth(),
+      amount: el.amount,
+    }));
+    setDataPoints(dataPoints);
+  }, [expensesList]);
 
   const onSelectHandler = (year) => {
     setFilteredYear(year);
@@ -48,7 +57,7 @@ const ExpenseContainer = () => {
       <NewExpense expenseHandler={expenseHandler} />
       <div className={classes.mainContainer}>
         <Filter selected={filteredYear} onSelectHandler={onSelectHandler} />
-        <FilterGraph />
+        <FilterGraph points={dataPoints} />
         {filteredExpenses.length === 0 ? (
           <p className={classes.noResultText}>No results Found!</p>
         ) : (
