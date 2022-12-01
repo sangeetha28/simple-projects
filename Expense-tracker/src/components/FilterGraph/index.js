@@ -17,13 +17,17 @@ const months = [
 
 function FilterGraph() {
   return (
-    <div class={classes.container}>
-      {[...new Array(12).keys()].map((e) => (
-        <div class={classes.graphItems}>
-          <div className={classes.graphItem} key={e}></div>
-          <p>{months[e]}</p>
-        </div>
-      ))}
+    <div>
+      <ul className={classes.container}>
+        {[...new Array(12).keys()].map((e) => (
+          <li key={e}>
+            <div className={classes.graphItems}>
+              <div className={classes.graphItem}></div>
+              <p>{months[e]}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

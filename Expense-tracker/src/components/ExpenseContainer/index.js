@@ -36,16 +36,13 @@ const ExpenseContainer = () => {
   };
 
   const expenseHandler = (item) => {
-    setExpensesList((prevState) => ({
-      ...prevState,
-      ...item,
-    }));
+    setExpensesList((prevState) => [...prevState, item]);
   };
 
   return (
-    <div class={classes.container}>
+    <div className={classes.container}>
       <NewExpense expenseHandler={expenseHandler} />
-      <div class={classes.mainContainer}>
+      <div className={classes.mainContainer}>
         <Filter selected={filteredYear} onSelectHandler={onSelectHandler} />
         <FilterGraph />
         <NewExpenseItemList expensesList={expensesList} />

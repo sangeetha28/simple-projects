@@ -3,7 +3,7 @@ import classes from "./index.module.css";
 
 const NewExpenseForm = (props) => {
   const { expenseItemHandler, expenseFormHandler } = props;
-  const [input, setInput] = useState({ title: "", price: "", date: "" });
+  const [input, setInput] = useState({ title: "", amount: "", date: "" });
 
   const submitHandler = (event) => {
     event.preventDefault();
@@ -23,14 +23,14 @@ const NewExpenseForm = (props) => {
   const priceChangeHandler = (event) => {
     setInput((prevState) => ({
       ...prevState,
-      price: event.target.value,
+      amount: event.target.value,
     }));
   };
 
   const dateChangeHandler = (event) => {
     setInput((prevState) => ({
       ...prevState,
-      date: event.target.value,
+      date: new Date(event.target.value),
     }));
   };
 
