@@ -35,6 +35,10 @@ const ExpenseContainer = () => {
     setFilteredYear(year);
   };
 
+  const filteredExpenses = expensesList.filter(
+    (expense) => expense.date.getFullYear().toString() === filteredYear
+  );
+
   const expenseHandler = (item) => {
     setExpensesList((prevState) => [...prevState, item]);
   };
@@ -45,7 +49,11 @@ const ExpenseContainer = () => {
       <div className={classes.mainContainer}>
         <Filter selected={filteredYear} onSelectHandler={onSelectHandler} />
         <FilterGraph />
-        <NewExpenseItemList expensesList={expensesList} />
+        {filteredExpenses.length === 0 ? (
+          <p className={classes.noResultText}>No results Found!</p>
+        ) : (
+          <NewExpenseItemList expensesList={filteredExpenses} />
+        )}
       </div>
     </div>
   );
