@@ -35,14 +35,14 @@ const NewExpenseForm = (props) => {
   };
 
   return (
-    <>
+    <div className={classes.container}>
       <button
         className={classes.back}
         onClick={() => expenseFormHandler(false)}
       >
         Back
       </button>
-      <form onSubmit={submitHandler} className={classes.container}>
+      <form onSubmit={submitHandler} className={classes.formContainer}>
         <div className={classes.inputContainer}>
           <label htmlFor="title">Title</label>
           <input id="title" value={input.title} onChange={titleChangeHandler} />
@@ -62,7 +62,7 @@ const NewExpenseForm = (props) => {
         </div>
         <button>Add Expense</button>
       </form>
-    </>
+    </div>
   );
 };
 

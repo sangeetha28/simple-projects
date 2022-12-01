@@ -1,7 +1,6 @@
 import classes from "./index.module.css";
 
 function ExpenseCard({ item }) {
-  console.log("item", item);
   const { title, amount, date } = item;
 
   const year = date.getFullYear();
