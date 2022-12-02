@@ -1,0 +1,20 @@
+.container {
+  margin: 0 auto;
+  z-index: 10;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 600px;
+  padding: 2rem;
+  gap: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10px;
+}
+
+.backButton {
+  border: none;
+  border-radius: 2px;
+  align-self: flex-end;
+  padding: 10px;
+}
